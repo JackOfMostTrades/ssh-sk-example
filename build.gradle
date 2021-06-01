@@ -1,0 +1,18 @@
+plugins {
+  id 'java'
+  id 'application'
+}
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  implementation group: 'com.webauthn4j', name: 'webauthn4j-core', version: '0.16.0.RELEASE'
+  implementation group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-cbor', version: '2.12.3'
+  implementation group: 'org.apache.sshd', name: 'sshd-common', version: '2.7.0'
+}
+
+application {
+  mainClass = 'ValidateAttestation'
+}
